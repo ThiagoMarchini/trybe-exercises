@@ -1,0 +1,39 @@
+h1{
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: overline underline;
+}
+ul{
+    background-color: peru;
+    text-align: left;
+    font-style: oblique;
+}
+.fundo{
+    background-color: rebeccapurple;
+}
+  p {
+    font-weight: 600;
+    font-size: 3em;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  li {
+    line-height: 130%;
+  }
+
+  #amarelo {
+    background-color: yellow;
+  }
+
+  #vermelho {
+    background-color: red;
+  }
+
+  #marrom {
+    background-color: brown;
+  }
