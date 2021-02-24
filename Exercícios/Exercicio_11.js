@@ -1,4 +1,6 @@
 let salarioBruto = 3800.00;
+let salarioBase;
+let salarioLiquido;
 let descontoINSS;
 let descontoIR;
 
@@ -17,7 +19,7 @@ switch (true) {
     descontoINSS = 0;
 }
 
-let salarioBase = salarioBruto - descontoINSS;
+salarioBase = salarioBruto - descontoINSS;
 
 //desconto IR
 switch (true) {
@@ -37,5 +39,5 @@ switch (true) {
     descontoIR = 0;
 }
 
-let salarioLiquido = salarioBase - descontoIR;
+salarioLiquido = salarioBase - descontoIR;
 console.log(salarioLiquido);
