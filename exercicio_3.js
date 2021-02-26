@@ -13,9 +13,3 @@ for(let index = 1; index <= n; index += 1){
   }
   console.log(b);
 }
-/*  for(let index = 1; index <= n; index += 1){
-    n * b += " ";
-    //index * b +="*";
-    console.log(b);
-  }
-*/
