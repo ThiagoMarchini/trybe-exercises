@@ -1,59 +1,59 @@
 //dada a posição da rainha e de uma outra peça num tabuleiro de xadrez, verifica se a jogada da rainha para atacar a peça é válida.
-const posicaoLinhaRainha = 4;
-const posicaoColunaRainha = 4;
+const queenLinePosition = 4;
+const queenColumnPosition = 4;
 
-const posicaoLinhaPeca = 6;
-const posicaoColunaPeca = 1;
+const pieceLinePosition = 7;
+const pieceColumnPosition = 7;
 
-let controle = false;
+let control = false;
 
 // verifica a linha e a coluna
-if(posicaoLinhaPeca == posicaoLinhaRainha || posicaoColunaPeca == posicaoColunaRainha){
-  controle = true;
+if(pieceLinePosition == queenLinePosition || pieceColumnPosition == queenColumnPosition){
+  control = true;
 }
 
 //verifica a diagonal superior direita
-for (var supDir = 1; supDir < 8; supDir += 1){
-  var linhaRainha = posicaoLinhaRainha + supDir;
-  var colunaRainha = posicaoColunaRainha + supDir;
-  if(posicaoColunaPeca == colunaRainha && posicaoLinhaPeca == linhaRainha){
-    if(colunaRainha <= 8 && linhaRainha <= 8){
-      controle = true;
+for (var supRight = 1; supRight < 8; supRight += 1){
+  var queenLine = queenLinePosition + supRight;
+  var queenColumn = queenColumnPosition + supRight;
+  if(pieceColumnPosition == queenColumn && pieceLinePosition == queenLine){
+    if(queenColumn <= 8 && queenLine <= 8){
+      control = true;
     }
   }
 }
 
 //verifica a diagonal inferior esquerda
-for (var infEsq = 1; infEsq < 8; infEsq += 1){
-  var linhaRainha = posicaoLinhaRainha - infEsq;
-  var colunaRainha = posicaoColunaRainha - infEsq;
-  if(posicaoColunaPeca == colunaRainha && posicaoLinhaPeca == linhaRainha){
-    if(colunaRainha > 0 && linhaRainha > 0){
-      controle = true;
+for (var infLeft = 1; infLeft < 8; infLeft += 1){
+  var queenLine = queenLinePosition - infLeft;
+  var queenColumn = queenColumnPosition - infLeft;
+  if(pieceColumnPosition == queenColumn && pieceLinePosition == queenLine){
+    if(queenColumn > 0 && queenLine > 0){
+      control = true;
     }
   }
 }
 
 //verifica a diagonal superior esquerda
-for (var supEsq = 1; supEsq < 8; supEsq += 1){
-  var linhaRainha = posicaoLinhaRainha - supEsq;
-  var colunaRainha = posicaoColunaRainha + supEsq;
-  if(posicaoColunaPeca == colunaRainha && posicaoLinhaPeca == linhaRainha){
-    if(colunaRainha < 9 && linhaRainha > 0){
-      controle = true;
+for (var supLeft = 1; supLeft < 8; supLeft += 1){
+  var queenLine = queenLinePosition - supLeft;
+  var queenColumn = queenColumnPosition + supLeft;
+  if(pieceColumnPosition == queenColumn && pieceLinePosition == queenLine){
+    if(queenColumn < 9 && queenLine > 0){
+      control = true;
     }
   }
 }
 
 //verifica a diagonal inferior direita
-for (var infDir = 1; infDir < 8; infDir += 1){
-  var linhaRainha = posicaoLinhaRainha + infDir;
-  var colunaRainha = posicaoColunaRainha - infDir;
-  if(posicaoColunaPeca == colunaRainha && posicaoLinhaPeca == linhaRainha){
-    if(colunaRainha > 0 && linhaRainha < 9){
-      controle = true;
+for (var infRight = 1; infRight < 8; infRight += 1){
+  var queenLine = queenLinePosition + infRight;
+  var queenColumn = queenColumnPosition - infRight;
+  if(pieceColumnPosition == queenColumn && pieceLinePosition == queenLine){
+    if(queenColumn > 0 && queenLine < 9){
+      control = true;
     }
   }
 }
 
-console.log(controle);
+console.log(control);
