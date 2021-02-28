@@ -1,10 +1,10 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
-let soma = 0;
+let sum = 0;
 for (let index = 0; index < numbers.length; index++){
-  soma += numbers[index];
+  sum += numbers[index];
 }
-console.log(soma);
+console.log(sum);
 
-let mediaAritmetica = soma / numbers.length;
-console.log(mediaAritmetica);
+let mean = sum / numbers.length;
+console.log(mean);

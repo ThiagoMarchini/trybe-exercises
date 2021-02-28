@@ -1,11 +1,11 @@
-//Agora você irá criar um novo array a partir do array numbers , sem perdê-lo. Cada valor do novo array deverá ser igual ao valor correspondente no array numbers multiplicado pelo seguinte. Por exemplo: o primeiro valor do novo array deverá ser 45, pois é a multiplicação de 5 (primeiro valor) e 9 (valor seguinte). Já o segundo valor do novo array deverá ser 27, pois é a multiplicação de 9 (segundo valor) e 3 (valor seguinte), e assim por diante. Caso não haja próximo valor, a multiplicação deverá ser feita por 2. Faça isso utilizando o for e o método push.
+//Agora você irá criar um novo array a partir do array numbers , sem perdê-lo. Cada value do novo array deverá ser igual ao value correspondente no array numbers multiplicado pelo seguinte. Por exemplo: o primeiro value do novo array deverá ser 45, pois é a multiplicação de 5 (primeiro value) e 9 (value seguinte). Já o segundo value do novo array deverá ser 27, pois é a multiplicação de 9 (segundo value) e 3 (value seguinte), e assim por diante. Caso não haja próximo value, a multiplicação deverá ser feita por 2. Faça isso utilizando o for e o método push.
 
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let multiplicados = [];
+let multiplied = [];
 
 for (let index = 0; index < numbers.length-1; index++){
-  let valor = numbers[index] * numbers[index+1];
-  multiplicados.push(valor);
+  let value = numbers[index] * numbers[index+1];
+  multiplied.push(value);
 }
-multiplicados.push(numbers[numbers.length-1]*2);
-console.log(multiplicados);
+multiplied.push(numbers[numbers.length-1]*2);
+console.log(multiplied);
