@@ -1,17 +1,17 @@
 h1{
-    font-size: 65px;
-    color: orange;
-    font-family: sans-serif;
-    text-align: center;
-    text-decoration: overline underline;
+  font-size: 65px;
+  color: orange;
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: overline underline;
 }
 ul{
-    background-color: peru;
-    text-align: left;
-    font-style: oblique;
+  background-color: peru;
+  text-align: left;
+  font-style: oblique;
 }
 .fundo{
-    background-color: rebeccapurple;
+  background-color: rebeccapurple;
 }
   p {
     font-weight: 600;
