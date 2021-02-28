@@ -5,7 +5,7 @@ switch (peca) {
     console.log("1 para frente");
     break;
   case "torre":
-    console.log("n para frente, tras ou para os lados");
+    console.log("n para frente, trás ou para os lados");
     break;
   case "cavalo":
     console.log("Em L (3:1)");
@@ -19,7 +19,7 @@ switch (peca) {
   case "rei":
     console.log("1 em qualquer direção");
     break;
-  default {
+  default:
     console.log("Erro! Peça não identificada.");
-  }
+  
 }
