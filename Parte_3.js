@@ -11,12 +11,12 @@ console.log(typeof isEnrolled);
 console.log(typeof patientInfo);
 //console.log(typeof patientEmail);
 
-//retangulo
+//rectangle
 const base = 8;
 const altura = 5;
 let area;
-let perimetro;
+let perimeter;
 area = (base * altura);
-perimetro = ((base + altura)*2);
+perimeter = ((base + altura)*2);
 console.log("Área: "+area);
-console.log("Perímetro: "+perimetro);
+console.log("Perímetro: "+perimeter);

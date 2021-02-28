@@ -1,9 +1,9 @@
-let nota = 90;
+let grade = 90;
 
-if (nota >= 80) {
+if (grade >= 80) {
     console.log("Parabéns, você foi aprovado!");
 }
-else if (nota >= 60) {
+else if (grade >= 60) {
     console.log("Você está na nossa lista de espera.")
 }
 else {

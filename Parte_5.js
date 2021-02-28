@@ -1,13 +1,13 @@
-let estado = "";
+let status = "";
 
-switch (estado) {
-  case "aprovado":
+switch (status) {
+  case "approved":
     console.log("Parabéns, você foi aprovado!");
     break;
-  case "lista":
+  case "list":
     console.log("Você está na nossa lista de espera.");
     break;
-  case "reprovado":
+  case "failed":
     console.log("Você foi reprovado.");
     break;
   default:
