@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="paragraph">Segundo parágrafo!</p>
+
+    <script>
+      var paragraph = document.querySelectorAll("p");
+      paragraph[0].innerText = "Parte I | Parte II | Parte III";
+
+      var title = document.querySelector("#page-title");
+      title.innerText = "Godfather";
+
+      var secondParagraph = document.querySelector("#second-paragraph");
+      secondParagraph.innerText = "O filme mais maravilhoso da triologia mais sensacional de todos os tempos."
+
+      var subtitle = document.getElementById("subtitle");
+      subtitle.innerText = "The Godfather: Part I";
+
+      var paragraphClass = document.getElementsByClassName("paragraph");
+      paragraphClass[0].style.color = "blue";
+
+    </script>
+  </body>
+</html>
