@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<div id="paiDoPai">
+  <div id="pai">
+    <div id="primeiroFilho"></div>
+    <div id="elementoOndeVoceEsta">
+      <div id="primeiroFilhoDoFilho"></div>
+      <div id="segundoEUltimoFilhoDoFilho"></div>
+    </div>
+    Atenção!
+    <div id="terceiroFilho"></div>
+    <div id="quartoEUltimoFilho"></div>
+  </div>
+</div>
+</body>
+<script>
+  /*
+// ------------------ PARTE 1 ------------------------------------
+// Acesse o elemento elementoOndeVoceEsta .
+document.querySelector('#elementoOndeVoceEsta');
+// Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+document.querySelector('#elementoOndeVoceEsta').parentElement.style.color = "red";
+//  Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+console.log(document.querySelector('#elementoOndeVoceEsta').childNodes[1].innerHTML = 'Primeiro Filho');
+//  Acesse o primeiroFilho a partir de pai .
+console.log(document.querySelector('#pai').firstElementChild);
+//  Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+console.log(document.querySelector('#elementoOndeVoceEsta').parentElement.firstElementChild);
+//  Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+console.log(document.querySelector('#elementoOndeVoceEsta').nextSibling); //.innerHTML = "Xablau";
+//  Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
+//  Agora acesse o terceiroFilho a partir de pai .
+console.log(document.querySelector('#pai').firstElementChild.nextElementSibling.nextElementSibling);
+
+// ------------------ PARTE 2 ------------------------------------
+// Crie um irmão para elementoOndeVoceEsta .
+let elementoPai = document.querySelector('#primeiroFilho');
+let siblingElement = document.createElement('div');
+siblingElement.innerText = 'IRMÃO';
+elementoPai.appendChild(siblingElement);
+// Crie um filho para elementoOndeVoceEsta .
+let elementoPai1 = document.querySelector('#elementoOndeVoceEsta');
+let siblingElement1 = document.createElement('div');
+siblingElement1.innerText = 'FILHO';
+elementoPai1.appendChild(siblingElement1);
+// Crie um filho para primeiroFilhoDoFilho .
+let elementoPai2 = document.querySelector('#primeiroFilhoDoFilho');
+let siblingElement2 = document.createElement('div');
+siblingElement2.innerText = 'primeiroFilhoDoFilhoDoFilho';
+siblingElement2.id = 'primeiroFilhoDoFilhoDoFilho';
+elementoPai2.appendChild(siblingElement2);
+// A partir desse filho criado, acesse terceiroFilho .
+console.log(document.querySelector('#primeiroFilhoDoFilhoDoFilho').parentElement.nextSibling.nextSibling);
+*/
+// ------------------ PARTE 3 ------------------------------------
+
+//Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho
+let parent = document.querySelector('#elementoOndeVoceEsta');
+let removeList = document.querySelectorAll('div');
+console.log(document.querySelector('#elementoOndeVoceEsta'));
+
+for (let element of removeList) {
+
+  if (element.innerText.includes('segundoEUltimoFilhoDoFilho'));
+  parent.removeChild(element);
+  }
+</script>
+</html>
