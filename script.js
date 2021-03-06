@@ -141,3 +141,32 @@ addTask('cozinhar');
 
 // -------------------- EXERCÍCIO 8 ----------------------------
 
+function colorTask (color) {
+  let newDiv = document.createElement('div');
+  let div = document.querySelector('.my-tasks');
+
+  newDiv.style.backgroundColor = color;
+  newDiv.className = 'task';
+  div.appendChild(newDiv);
+}
+
+colorTask('red');
+
+// -------------------- EXERCÍCIO 9 ----------------------------
+
+function setTaskClass () {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let myTask = document.querySelector('.task');
+
+  myTask.addEventListener('click', function(event) {
+    if (selectedTask.length == 0) {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+    }
+  })
+}
+
+setTaskClass();
+
+// -------------------- EXERCÍCIO 10 ----------------------------
