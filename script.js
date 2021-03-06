@@ -129,3 +129,15 @@ ul.addEventListener("mouseout", zoomOut);
 
 // -------------------- EXERCÍCIO 7 ----------------------------
 
+function addTask(string) {
+  let div = document.querySelector('.my-tasks');
+  let span = document.createElement('span');
+  text = string;
+  span.innerText = string;
+  div.appendChild(span);
+}
+
+addTask('cozinhar');
+
+// -------------------- EXERCÍCIO 8 ----------------------------
+
