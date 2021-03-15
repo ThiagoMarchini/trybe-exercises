@@ -1,0 +1,62 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: larger;
+  text-align: center;
+}
+
+fieldset {
+  border: 1px solid grey;
+  width: 80%;
+  margin: auto;
+  padding: 15px;
+}
+
+input , textarea {
+  border: 1px solid lightgrey;
+}
+
+button {
+  width: 100px;
+  height: 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+button:hover {
+  border: 2px solid darkgrey;
+}
+
+#submit {
+  background-color: lightgreen;
+}
+
+#submit:hover {
+  border: 2px solid green;
+}
+
+#clear {
+  background-color: red;
+}
+
+#clear:hover {
+  border: 2px solid darkred;
+}
+
+.buttons {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.form {
+  background-color: white;
+  border: 1px solid lightgray;
+}
