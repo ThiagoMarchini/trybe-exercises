@@ -5,8 +5,8 @@
 }
 
 h1 {
-  margin: 15px auto;
-  font-size: larger;
+  margin: 20px auto;
+  font-size: x-large;
   text-align: center;
 }
 
@@ -14,6 +14,7 @@ fieldset {
   border: 1px solid grey;
   width: 80%;
   margin: auto;
+  margin-bottom: 50px;
   padding: 15px;
 }
 
@@ -22,40 +23,12 @@ input , textarea {
 }
 
 button {
-  width: 100px;
-  height: 25px;
-  border-radius: 10px;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  align-items: center;
-}
-
-button:hover {
-  border: 2px solid darkgrey;
-}
-
-#submit {
-  background-color: lightgreen;
-}
-
-#submit:hover {
-  border: 2px solid green;
-}
-
-#clear {
-  background-color: red;
-}
-
-#clear:hover {
-  border: 2px solid darkred;
+  margin: 15px;
+  margin-bottom: 50px;
 }
 
 .buttons {
   width: 80%;
-  margin: auto;
-  vertical-align: middle;
-  text-align: center;
 }
 
 .form {

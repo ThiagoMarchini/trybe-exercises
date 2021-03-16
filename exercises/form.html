@@ -10,12 +10,12 @@
   <script src="../node_modules/date-picker/dist/js/DatePickerX.min.js"></script>
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../node_modules/date-picker/dist/css/DatePickerX.min.css">
-  <link>
+  <link href="../node_modules/popup-validation/bin/validation.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <form action="#" method="get" class="form">
-    <h1>Cadastro de Currículo</h1>
+    <h1 class="display-5">Cadastro de Currículo</h1>
     <fieldset>
       <div class="mb-2">
         <label class="form-label" for="name">Nome:</label>
@@ -51,7 +51,8 @@
         <label class="form-check-label" for="casa">Casa</label><input class="form-check-input" type="radio" id="casa" value="casa" name="type">
       </div>
     </fieldset>
-    <h1>Último emprego:</h1>
+    <hr>
+    <h1 class="display-5">Último emprego:</h1>
     <fieldset>
       <div class="mb-2">
         <label class="form-label" for="resumo-curriculo">Resumo do currículo:</label>
@@ -69,12 +70,15 @@
       <label class="form-label" for="start-date">Data de início:</label>
       <input class="form-control" type="text" id="start-date" maxlength="10">
     </fieldset>
-  <div class="buttons">
-      <button type="submit" id="submit">Submit</button>
-      <button type="clear" id="clear">Clear</button>
+    <div class="container buttons">
+      <div class="row">
+        <button class="col btn btn-success" type="submit" id="submit">Submit</button>
+        <button class="col btn btn-danger" type="clear" id="clear">Clear</button>
+      </div>
     </div>
   </form>
   <div id="abstract"></div>
+  <script src="../node_modules/popup-validation/bin/validation.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
