@@ -28,7 +28,6 @@ const states = {
   TO: 'Tocantins'
 }
 
-
 function populateSelect() {
   const select = document.getElementById('state');
   for (let key in states) {
@@ -53,6 +52,32 @@ function validateDate() {
   }
 }
 
+function createDivContent() {
+  const parent = document.getElementById('abstract');
+  const inputs = document.querySelectorAll('input');
+  for (let index = 0; index < inputs.length; index += 1) {
+    if (inputs[index].type === "radio" && inputs[index].checked) {
+      let paragraph = document.createElement('p');
+      paragraph.innerText = `${inputs[index].id}: ${inputs[index].value} checked`;
+      parent.appendChild(paragraph);
+    } else if (inputs[index].type !== "radio") {
+      let paragraph = document.createElement('p');
+      paragraph.innerText = `${inputs[index].id}: ${inputs[index].value}`;
+      parent.appendChild(paragraph);
+    }
+    console.log(inputs[index]);
+  }
+  const select = document.querySelector('select');
+  paragraph = document.createElement('p');
+  paragraph.innerText = `Estado: ${select.value}`;
+  parent.appendChild(paragraph);
+  const textarea = document.querySelector('textarea');
+  paragraph = document.createElement('p');
+  paragraph.innerText = `Resumo do currículum: ${textarea.value}`;
+  parent.appendChild(paragraph);
+  console.log(inputs);
+}
+
 populateSelect();
 
 document.getElementById("submit").addEventListener("click", function(event){
@@ -60,4 +85,5 @@ document.getElementById("submit").addEventListener("click", function(event){
   if (document.getElementById('start-date').value) {
     validateDate();
   }
+  createDivContent();
 });
