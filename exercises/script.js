@@ -38,6 +38,8 @@ function populateSelect() {
   }
 }
 
+populateSelect();
+
 // function validateDate() {
 //   const inputDate = document.getElementById('start-date').value;
 //   const dateArray = inputDate.split('/');
@@ -78,8 +80,6 @@ function createDivContent() {
   console.log(inputs);
 }
 
-populateSelect();
-
 document.getElementById('start-date').DatePickerX.init({
   mondayFirst: true,
   format: 'dd/mm/yyyy',
@@ -94,6 +94,25 @@ document.getElementById('start-date').DatePickerX.init({
   titleFormatMonth: 'MM yyyy',
   titleFormatYear: 'yyyy'
 });
+
+// Bootstrap validation
+(function () {
+  'use strict'
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+});
+
 
 document.getElementById("submit").addEventListener("click", function(event){
   createDivContent();

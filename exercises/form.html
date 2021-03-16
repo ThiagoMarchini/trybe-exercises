@@ -8,47 +8,70 @@
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="../node_modules/date-picker/dist/js/DatePickerX.min.js"></script>
+  <script src="../node_modules/bootstrap/js/dist/"></script>
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../node_modules/date-picker/dist/css/DatePickerX.min.css">
-  <link href="../node_modules/popup-validation/bin/validation.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form action="#" method="get" class="form">
+  <form action="#" method="get" class="was-validated" id="form">
     <h1 class="display-5">Cadastro de Currículo</h1>
     <fieldset>
-      <div class="mb-2">
+      <div class="mb-2 form-group">
         <label class="form-label" for="name">Nome:</label>
-        <input class="form-control" type="text" id="name" maxlength="40" required>
+        <input class="form-control is-valid" autocomplete="off" data-validate-field="name" type="text" id="name" name="name" required>
+        <div class="invalid-feedback">
+          Por favor, digite seu nome.
+        </div>
       </div>
       <div class="mb-2">
         <label class="form-label" for="email">E-mail:</label>
-        <input class="form-control" type="email" id="email" maxlength="50" required>
+        <input class="form-control is-valid" type="email" id="email" maxlength="50" required>
+        <div class="invalid-feedback">
+          Por favor, digite um endereço de e-mail válido
+        </div>
       </div>
       <div class="mb-2">
       <label class="form-label" for="cpf">CPF:</label>
-        <input class="form-control" type="text" id="cpf" maxlength="11" required>
+        <input class="form-control is-valid" type="number" id="cpf" maxlength="11" required>
+        <div class="invalid-feedback">
+          Por favor, digite apenas números
+        </div>
       </div>
       <div class="mb-2">
       <label class="form-label" for="adress">Endereço:</label>
-        <input class="form-control" type="text" id="address" maxlength="200" required>
+        <input class="form-control is-valid" type="text" id="address" maxlength="200" required>
+        <div class="invalid-feedback">
+          Por favor, preencha seu endereço completo.
+        </div>
       </div>
       <div class="mb-2">
       <label class="form-label" for="city">Cidade:</label>
-        <input class="form-control" type="text" id="city" maxlength="28" required>
+        <input class="form-control is-valid" type="text" id="city" maxlength="28" required>
+        <div class="invalid-feedback">
+          Por favor, preencha com o nome da cidade onde mora.
+        </div>
       </div>
       <div class="mb-2">
       <label class="form-label" for="state">Estado:</label>
-        <select  class="form-select form-select-sm" id="state">
+          <select  class="form-select is-valid" id="state" required>
+          <option selected disabled value="">Escolha...</option>
         </select>
+        <div class="invalid-feedback">
+          Por favor, selecione um estado
+        </div>
       </div>
       <div class="mb-0">
         <label class="form-label">Tipo:</label>
       </div>
       <div class="form-check">
-        <label class="form-check-label" for="ap">Apartamento</label><input class="form-check-input" type="radio" id="ap" value="ap" name="type" checked>
-        <br>
-        <label class="form-check-label" for="casa">Casa</label><input class="form-check-input" type="radio" id="casa" value="casa" name="type">
+        <label class="form-check-label" for="ap">Apartamento</label>
+        <input type="radio" class="form-check-input" id="ap" name="moradia" required>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="casa">Casa</label>
+        <input type="radio" class="form-check-input" id="casa" name="moradia" required>
+        <div class="invalid-feedback">Selecione ao menos uma opção.</div>
       </div>
     </fieldset>
     <hr>
@@ -56,29 +79,37 @@
     <fieldset>
       <div class="mb-2">
         <label class="form-label" for="resumo-curriculo">Resumo do currículo:</label>
-        <textarea class="form-control" rows="8" cols=48 maxlength="1000" id="resumo-curriculo" required></textarea>
+        <textarea class="form-control is-invalid" rows="8" cols=48 maxlength="1000" id="resumo-curriculo" required></textarea>
+        <div class="invalid-feedback">
+          Por favor, faça um breve resumo de até 1.000 caracteres.
+        </div>
       </div>
       <div class="mb-2">
       <label class="form-label" for="cargo">Cargo:</label>
-      <input class="form-control" type="text" maxlength="40" id="cargo" required>
+      <input class="form-control is-invalid" type="text" maxlength="40" id="cargo" required>
+      <div class="invalid-feedback">
+        Por favor, preencha o seu cargo.
+      </div>
     </div>
     <div class="mb-2">
       <label class="form-label" for="description">Descrição do cargo:</label>
       <input class="form-control"  type="text" maxlength="500" id="description" required>
+      <div class="invalid-feedback">
+        Por favor, faça uma breve descrição das suas funções no cargo.
+      </div>
     </div>
     <div class="mb-2">
       <label class="form-label" for="start-date">Data de início:</label>
-      <input class="form-control" type="text" id="start-date" maxlength="10">
+      <input class="form-control" type="text" id="start-date" maxlength="10" required>
     </fieldset>
     <div class="container buttons">
       <div class="row">
-        <button class="col btn btn-success" type="submit" id="submit">Submit</button>
+        <button class="btn col btn-primary btn-success" type="submit" id="submit">Submit</button>
         <button class="col btn btn-danger" type="clear" id="clear">Clear</button>
       </div>
     </div>
   </form>
   <div id="abstract"></div>
-  <script src="../node_modules/popup-validation/bin/validation.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

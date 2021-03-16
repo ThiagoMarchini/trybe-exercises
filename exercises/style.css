@@ -18,10 +18,6 @@ fieldset {
   padding: 15px;
 }
 
-input , textarea {
-  border: 1px solid lightgrey;
-}
-
 button {
   margin: 15px;
   margin-bottom: 50px;
@@ -29,9 +25,4 @@ button {
 
 .buttons {
   width: 80%;
-}
-
-.form {
-  background-color: white;
-  border: 1px solid lightgray;
 }
