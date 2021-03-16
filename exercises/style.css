@@ -5,6 +5,7 @@
 }
 
 h1 {
+  margin: 15px auto;
   font-size: larger;
   text-align: center;
 }
@@ -22,7 +23,7 @@ input , textarea {
 
 button {
   width: 100px;
-  height: 20px;
+  height: 25px;
   border-radius: 10px;
   margin: auto;
   margin-top: 15px;
@@ -53,6 +54,7 @@ button:hover {
 .buttons {
   width: 80%;
   margin: auto;
+  vertical-align: middle;
   text-align: center;
 }
 

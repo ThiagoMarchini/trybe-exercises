@@ -38,19 +38,19 @@ function populateSelect() {
   }
 }
 
-function validateDate() {
-  const inputDate = document.getElementById('start-date').value;
-  const dateArray = inputDate.split('/');
-  if (dateArray[0] < 1 || dateArray[0] > 31) {
-    alert("o dia deve estar entre 1 e 31")
-  }
-  if (dateArray[1] < 1 || dateArray[1] > 12) {
-    alert("o mês deve estar entre 1 e 12")
-  }
-  if (dateArray[2] < 0) {
-    alert("o ano não pode ser negativo")
-  }
-}
+// function validateDate() {
+//   const inputDate = document.getElementById('start-date').value;
+//   const dateArray = inputDate.split('/');
+//   if (dateArray[0] < 1 || dateArray[0] > 31) {
+//     alert("o dia deve estar entre 1 e 31")
+//   }
+//   if (dateArray[1] < 1 || dateArray[1] > 12) {
+//     alert("o mês deve estar entre 1 e 12")
+//   }
+//   if (dateArray[2] < 0) {
+//     alert("o ano não pode ser negativo")
+//   }
+// }
 
 function createDivContent() {
   const parent = document.getElementById('abstract');
@@ -80,10 +80,21 @@ function createDivContent() {
 
 populateSelect();
 
+document.getElementById('start-date').DatePickerX.init({
+  mondayFirst: true,
+  format: 'dd/mm/yyyy',
+  minDate: new Date(1800, 01, 01),
+  maxDate: new Date(),
+  weekDayLabels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+  shortMonthLabels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+  singleMonthLabels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+  todayButtonLabel: 'Hoje',
+  clearButtonLabel: 'Apagar',
+  titleFormatDay: 'dd de MM de yyyy',
+  titleFormatMonth: 'MM yyyy',
+  titleFormatYear: 'yyyy'
+});
+
 document.getElementById("submit").addEventListener("click", function(event){
-  event.preventDefault()
-  if (document.getElementById('start-date').value) {
-    validateDate();
-  }
   createDivContent();
 });
