@@ -7,7 +7,54 @@ html {
 }
 
 @media screen and (max-width: 767px) {  
+  header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
 
+  header p {
+    margin: 10px;
+  }
+
+  header ul {
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    width: 75%;
+    margin: auto;
+    margin-top: 25px;
+    font-size: x-large;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+    margin: 15px 20px;
+    text-align: justify;
+  }
+
+  .aside-one h2, .aside-two h2 {
+    text-align: center;
+  }
+
+  .aside-one ul, .aside-two ul {
+    padding: 0 15px;
+    margin: auto;
+    list-style: none;
+    font-size:20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
