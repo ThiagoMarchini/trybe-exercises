@@ -6,61 +6,129 @@ html {
   box-sizing: inherit;
 }
 
-@media screen and (max-width: 767px) {  
-  header {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 0;
-  }
+header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
 
-  header p {
-    margin: 10px;
-  }
+header p {
+  font-size: 30px;
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+}
 
-  header ul {
-    list-style: none;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-  }
+header ul {
+  list-style: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
 
-  h1 {
-    width: 75%;
-    margin: auto;
-    margin-top: 25px;
-    font-size: x-large;
-    text-align: center;
-  }
+h1 {
+  width: 75%;
+  margin: auto;
+  margin-top: 25px;
+  font-size: x-large;
+  text-align: center;
+}
 
-  h3 {
-    text-align: center;
-  }
+h3 {
+  text-align: center;
+}
 
-  p {
-    font-size: 20px;
-    margin: 15px 20px;
-    text-align: justify;
-  }
+p {
+  font-size: 20px;
+  margin: 15px 20px;
+  text-align: justify;
+}
 
-  .aside-one h2, .aside-two h2 {
-    text-align: center;
-  }
+.aside-one h2, .aside-two h2 {
+  text-align: center;
+}
 
-  .aside-one ul, .aside-two ul {
-    padding: 0 15px;
-    margin: auto;
-    list-style: none;
-    font-size:20px;
-  }
+.aside-one ul, .aside-two ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
 }
 
 @media screen and (min-width: 768px) {
+  header p {
+    font-size: 40px;
+    width: 80%;
+  }
   
+  header ul {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 50px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 20px;
+    line-height: 1.5em;
+    margin: 0 40px;
+  }
+  
+  .aside-one h2, .aside-two h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .aside-one ul {
+    font-size: 20px;
+    text-align: left;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .aside-two ul {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  header p {
+
+  }
   
+  header ul {
+
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 25px;
+  }
+  
+  footer p {
+    font-size: 20px;
+    width: 60%;
+    margin: auto;
+  }
 }
