@@ -3,27 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Stomatopoda</title>
   </head>
   <body>
     <header>
-        <h1>Soco a 80km/h: Conheça o Stomatopoda</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Página Inicial</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
+      <h1>Soco a 80km/h: Conheça o Stomatopoda</h1>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#geral">Geral</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#visao">Visão</a>
+              <li class="nav-item">
+              <a class="nav-link" href="#culinaria">Culinária</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
     <section>
         <h2>Fatos sobre o Stomatopoda</h2>
         <h3>Classificação</h3>
-        <table>
+        <table class="table table-striped table-bordered">
           <tr>
-            <td>Reino</td>
-            <td>Animalia</td>
+            <th>Reino</th>
+            <th>Animalia</th>
           </tr>
           <tr>
             <td>Filo</td>
@@ -48,26 +61,31 @@
         </table>
     </section>
     <hr>
-    <section>
+    <section id="geral">
       <h3>Características gerais:</h3>
-      <p>São conhecidos no Brasil como <em>tamarutacas</em> ou <em>lacraias do mar</em>, no exterior são conhecidos como camarão-louva-a-deus (<em>Mantis shrimp</em>). São os últimos remanescentes da <em>Subclasse Hoplocarida</em> nos dias atuais.<br>A principal característica que os diferencia está no primeiro par de pernas, que apresentam um formato especial. São extremamente potentes, usadas para atacar e matar suas presas através de perfuração ou atordoamento. São capazes de atingir uma aceleração de <strong>10g</strong>, e uma velocidade de mais de <strong>80km/h</strong> durante o golpe, criando <em>cavitação</em> e uma forte onda de choque, capaz de matar a presa mesmo que o animal erre o golpe.<br>Veja-o em ação <a href="https://www.youtube.com/watch?v=E0Li1k5hGBE"><span>neste link</span>.</a></p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Squilla_mantis.jpg" alt="Visão Geral da tamarutaca">
+      <div class="geral">
+        <p>São conhecidos no Brasil como <em>tamarutacas</em> ou <em>lacraias do mar</em>, no exterior são conhecidos como camarão-louva-a-deus (<em>Mantis shrimp</em>). São os últimos remanescentes da <em>Subclasse Hoplocarida</em> nos dias atuais.<br>A principal característica que os diferencia está no primeiro par de pernas, que apresentam um formato especial. São extremamente potentes, usadas para atacar e matar suas presas através de perfuração ou atordoamento. São capazes de atingir uma aceleração de <strong>10g</strong>, e uma velocidade de mais de <strong>80km/h</strong> durante o golpe, criando <em>cavitação</em> e uma forte onda de choque, capaz de matar a presa mesmo que o animal erre o golpe.<br><span>Veja-o em ação <a href="https://www.youtube.com/watch?v=E0Li1k5hGBE"><span>neste link</span>.</a></span></p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Squilla_mantis.jpg" alt="Visão Geral da tamarutaca">
+      </div>
     </section>
     <hr>
-    <section class="right">
+    <section id="visao">
       <h3>Visão:</h3>
-      <img class="right" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mantis_Shrimp_Eyes.JPG" alt="Visão em close dos olhos da tamarutaca">
-      <p>Os <em>Stomatopoda</em> possuem o mecanismo de visão mais complexo já encontrado em um ser vivo, possuindo de 12 a 16 tipos diferentes de fotorreceptores (nós, humanos, possuímos apenas 4). Isso os torna capazes de enxergar no expectro ultravioleta e infravermelho, e dá a eles uma percepção de profundidade única.<br>Acredita-se que essa vosão, além de apresentar uma vantagem na hora ca caça, é usada também para sinalização e acasalamento.</p>
-      
+      <div class="visao">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mantis_Shrimp_Eyes.JPG" alt="Visão em close dos olhos da tamarutaca">
+        <p>Os <em>Stomatopoda</em> possuem o mecanismo de visão mais complexo já encontrado em um ser vivo, possuindo de 12 a 16 tipos diferentes de fotorreceptores (nós, humanos, possuímos apenas 4). Isso os torna capazes de enxergar no expectro ultravioleta e infravermelho, e dá a eles uma percepção de profundidade única.<br>Acredita-se que essa vosão, além de apresentar uma vantagem na hora ca caça, é usada também para sinalização e acasalamento.</p>   
+      </div>   
     </section>
     <hr>
-    <section>
+    <section id="culinaria">
       <h3>Culinária:</h3>
-      <p>São ingredientes usados na ciulinária asiática, principalmente no Japão, China, e Vietnam. Assemelham-se mais às lagostas que aos camarões, tanto na textura e gosto da sua carne, quanto na dureza de sua carapaça, difífil de quebrar. Na ásia, são muito apreciados entre os meses de abril e maio, quando as fêmeas da espécie contém ovas.<br>Quanto aos modos de preparação, são extremamente versáteis, podendo ser cozidos na água ou no vapor, salteados ou fritos por imersão.</p>
-      <img src="http://www.ecns.cn/hd/2018/04/04/fcccca115fb34860a4ce2232cdc14b17.jpg" alt="Prato de tamarutacas salteadas.">
+      <div class="culinaria">
+        <p>São ingredientes usados na ciulinária asiática, principalmente no Japão, China, e Vietnam. Assemelham-se mais às lagostas que aos camarões, tanto na textura e gosto da sua carne, quanto na dureza de sua carapaça, difífil de quebrar. Na ásia, são muito apreciados entre os meses de abril e maio, quando as fêmeas da espécie contém ovas.<br>Quanto aos modos de preparação, são extremamente versáteis, podendo ser cozidos na água ou no vapor, salteados ou fritos por imersão.</p>
+        <img src="http://www.ecns.cn/hd/2018/04/04/fcccca115fb34860a4ce2232cdc14b17.jpg" alt="Prato de tamarutacas salteadas.">
+      </div>
     </section>
     <hr>
-    <section>
+    <section class="referencias">
       <h3>Referências:</h3>
       <ul>
         <li><a href="http://www.ecns.cn/visual/hd/2018/04-04/158213.shtml">Ecns.cn (em inglês)</a></li>
@@ -76,7 +94,9 @@
       </ul>
     </section>
     <footer>
-      Conteúdo compilado por Thiago Marchini, 2021.
+      <p>Conteúdo compilado por Thiago Marchini, 2021.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
   </body>
 </html>
