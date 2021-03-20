@@ -1,0 +1,40 @@
+body {
+  background-color: lightcyan;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin: 20px auto;
+}
+
+table tr td:nth-of-type(2), table tr th:nth-of-type(2) {
+  text-align: center;
+}
+
+img {
+  width: 75%;
+  height: 75%;
+}
+
+td {
+  margin: auto;
+}
+
+p {
+  text-align: justify;
+}
+
+.table {
+  margin: auto;
+  width: 30%;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.referencias ul {
+  list-style: none;
+}
