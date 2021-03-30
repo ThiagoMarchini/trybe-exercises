@@ -67,18 +67,24 @@ const books = [
 
 const expectedResult = false;
 
-function everyoneWasBornOnSecXX() {
-  const yearBorn = [];
-  let boolean = true;
-  books.forEach(element => {
-    yearBorn.push(element.author.birthYear);
-  });
-  yearBorn.forEach(element => {
-    if (1901 > element || element > 2001) {
-      boolean = false;
-    }
-  })
-  return boolean;
+// function everyoneWasBornOnSecXX() {
+//   const yearBorn = [];
+//   let boolean = true;
+//   books.forEach(element => {
+//     yearBorn.push(element.author.birthYear);
+//   });
+//   yearBorn.forEach(element => {
+//     if (1901 > element || element > 2001) {
+//       boolean = false;
+//     }
+//   })
+//   return boolean;
+// }
+
+const everyoneWasBornOnSecXX = () => {
+  return books.every((book) => (
+    book.author.birthYear > 1900 && book.author.birthYear < 2001
+  ));
 }
 
 assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);

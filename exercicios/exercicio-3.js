@@ -76,16 +76,18 @@ const expectedResult = {
   releaseYear: 1991,
 };
 
-function getNamedBook() {
-  let returnElement;
-  books.forEach(element => {
-    if (element.name.length === 26) {
-      returnElement = element;
-    }
-  });
-  return returnElement;
-}
+// function getNamedBook() {
+//   let returnElement;
+//   books.forEach(element => {
+//     if (element.name.length === 26) {
+//       returnElement = element;
+//     }
+//   });
+//   return returnElement;
+// }
 
-getNamedBook();
+const getNamedBook = () => {
+  return books.find((element) => element.name.length === 26);
+}
 
 assert.deepStrictEqual(getNamedBook(), expectedResult);

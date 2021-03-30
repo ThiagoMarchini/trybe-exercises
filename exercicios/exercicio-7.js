@@ -67,21 +67,28 @@ const books = [
 
 const expectedResult = false;
 
-function authorUnique() {
-  const birthDates = [];
-  let boolean = true;
-  books.forEach(element => {
-    birthDates.push(element.author.birthYear);
-  });
-  while (birthDates.length > 0) {
-    let compare = birthDates.pop();
-    birthDates.forEach(element => {
-      if (compare === element) {
-        boolean = false;
-      }
-    })
-  }
-  return boolean;
-}
+// function authorUnique() {
+//   const birthDates = [];
+//   let boolean = true;
+//   books.forEach(element => {
+//     birthDates.push(element.author.birthYear);
+//   });
+//   while (birthDates.length > 0) {
+//     let compare = birthDates.pop();
+//     birthDates.forEach(element => {
+//       if (compare === element) {
+//         boolean = false;
+//       }
+//     })
+//   }
+//   return boolean;
+// }
 
-assert.strictEqual(authorUnique(), expectedResult);
+const authorUnique = () => {
+  return books.every((book) => 
+    !books.some((book2) => 
+      (book2.author.birthYear === book.author.birthYear) &&
+      (book2.author.name !== book.author.name)));
+  }
+console.log(authorUnique());
+// assert.strictEqual(authorUnique(), expectedResult);

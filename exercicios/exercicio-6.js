@@ -67,15 +67,21 @@ const books = [
 
 const expectedResult = true;
 
-function someBookWasReleaseOnThe80s() {
-  const yearPublished = [];
-  let boolean = false;
-  books.forEach(element => {
-    if (/198/.test(element.releaseYear)) {
-      boolean = true;
-    }
-  });
-  return boolean;
+// function someBookWasReleaseOnThe80s() {
+//   const yearPublished = [];
+//   let boolean = false;
+//   books.forEach(element => {
+//     if (/198/.test(element.releaseYear)) {
+//       boolean = true;
+//     }
+//   });
+//   return boolean;
+// }
+
+const someBookWasReleaseOnThe80s = () => {
+  return books.some((book) => (
+    book.releaseYear > 1979 && book.releaseYear < 1990
+  ));
 }
 
 assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);

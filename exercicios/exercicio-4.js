@@ -110,23 +110,25 @@ const expectedResult = [
   },
 ];
 
-function booksOrderedByReleaseYearDesc() {
-  const arrayYears = [];
-  const returnArray = [];
-  books.forEach((element) => {
-    arrayYears.push(element.releaseYear);
-  });
-  arrayYears.sort((a, b) => b - a);
-  for (let year of arrayYears) {
-    books.forEach(element => {
-      if (year === element.releaseYear) {
-        returnArray.push(element);
-      }
-    });
-  }
-  return returnArray;
-}
+// function booksOrderedByReleaseYearDesc() {
+//   const arrayYears = [];
+//   const returnArray = [];
+//   books.forEach((element) => {
+//     arrayYears.push(element.releaseYear);
+//   });
+//   arrayYears.sort((a, b) => b - a);
+//   for (let year of arrayYears) {
+//     books.forEach(element => {
+//       if (year === element.releaseYear) {
+//         returnArray.push(element);
+//       }
+//     });
+//   }
+//   return returnArray;
+// }
 
-// booksOrderedByReleaseYearDesc();
+const booksOrderedByReleaseYearDesc = () => {
+  return books.sort((a, b) => b.releaseYear - a.releaseYear);
+}
 
 assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult);

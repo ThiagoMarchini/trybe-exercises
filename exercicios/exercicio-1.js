@@ -66,15 +66,20 @@ const books = [
   },
 ];
 
-function authorBornIn1947() {
-  let author = '';
-  books.forEach(element => {
-    const entry = Object.entries(element.author);
-    if (entry[1][1] === 1947) {
-      author = entry[0][1];
-    }
-  });
-  return author;
+// function authorBornIn1947() {
+//   let author = '';
+//   books.forEach(element => {
+//     const entry = Object.entries(element.author);
+//     if (entry[1][1] === 1947) {
+//       author = entry[0][1];
+//     }
+//   });
+//   return author;
+// }
+const checkYear = (year) => year === 1947;
+
+const authorBornIn1947 = () => {
+  return books.find((book) => book.author.birthYear === 1947).author.name;
 }
 // authorBornIn1947();
 assert.strictEqual(authorBornIn1947(), 'Stephen King');
