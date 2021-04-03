@@ -17,10 +17,10 @@ const estudantes = [
     idade: 15,
     turno: 'Tarde',
     materias: [
-      { name: 'Matemática', nota: '59' },
-      { name: 'Português', nota: '80' },
-      { name: 'Química', nota: '78' },
-      { name: 'Biologia', nota: '92' },
+      { name: 'Matemática', nota: 59 },
+      { name: 'Português', nota: 80 },
+      { name: 'Química', nota: 78 },
+      { name: 'Biologia', nota: 92 },
     ],
   },
   {
@@ -29,10 +29,10 @@ const estudantes = [
     idade: 15,
     turno: 'Manhã',
     materias: [
-      { name: 'Matemática', nota: '76' },
-      { name: 'Português', nota: '90' },
-      { name: 'Química', nota: '70' },
-      { name: 'Biologia', nota: '80' },
+      { name: 'Matemática', nota: 76 },
+      { name: 'Português', nota: 90 },
+      { name: 'Química', nota: 70 },
+      { name: 'Biologia', nota: 80 },
     ],
   },
   {
@@ -41,10 +41,10 @@ const estudantes = [
     idade: 14,
     turno: 'Manhã',
     materias: [
-      { name: 'Matemática', nota: '91' },
-      { name: 'Português', nota: '85' },
-      { name: 'Química', nota: '92' },
-      { name: 'Biologia', nota: '90' },
+      { name: 'Matemática', nota: 91 },
+      { name: 'Português', nota: 85 },
+      { name: 'Química', nota: 92 },
+      { name: 'Biologia', nota: 90 },
     ],
   },
   {
@@ -53,10 +53,10 @@ const estudantes = [
     idade: 14,
     turno: 'Manhã',
     materias: [
-      { name: 'Matemática', nota: '70' },
-      { name: 'Português', nota: '70' },
-      { name: 'Química', nota: '60' },
-      { name: 'Biologia', nota: '50' },
+      { name: 'Matemática', nota: 70 },
+      { name: 'Português', nota: 70 },
+      { name: 'Química', nota: 60 },
+      { name: 'Biologia', nota: 50 },
     ],
   },
   {
@@ -65,19 +65,24 @@ const estudantes = [
     idade: 14,
     turno: 'Manhã',
     materias: [
-      { name: 'Matemática', nota: '80' },
-      { name: 'Português', nota: '82' },
-      { name: 'Química', nota: '79' },
-      { name: 'Biologia', nota: '75' },
+      { name: 'Matemática', nota: 80 },
+      { name: 'Português', nota: 82 },
+      { name: 'Química', nota: 79 },
+      { name: 'Biologia', nota: 75 },
     ],
   },
 ];
 
 // Agora crie uma função usando os dados dos estudantes que usamos no conteúdo do dia anterior, para mostrar na tela um relatório que diz em qual matéria o estudante foi melhor. Você usará tanto o map quanto, dentro dele, o reduce!
 
-getBigger = (bigger, number) => ((bigger > number) ? bigger : number);
+const getBestClass = (acc, materia) => {
+  if (acc.nota > materia.nota) return acc;
+  return materia;
+};
 
-estudantes.forEach(element => {
-  const grades = element.materias;
-  
-});
+const reportBetter = (students) => students.map((student) => ({
+      name: student.nome,
+      materia: student.materias.reduce(getBestClass).name,
+    }));
+
+console.log(reportBetter(estudantes));
