@@ -1,0 +1,23 @@
+{
+  "name": "trybe-exercises",
+  "version": "1.0.0",
+  "description": "Repositório para o armazenamento dos exercícios e projetos desenvolvidos durante o curso de Desenvolvimento Web da Trybe.",
+  "main": "promises.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoMarchini/trybe-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThiagoMarchini/trybe-exercises/issues"
+  },
+  "homepage": "https://github.com/ThiagoMarchini/trybe-exercises#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
