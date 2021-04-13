@@ -28,10 +28,11 @@ const promise = new Promise((resolve, reject) => {
     const division = [2, 3, 5, 10];
     const result = division.map((number) => Math.round(sum / number));
     console.log(result);
-    const promise2 = new Promise((resolve, reject) => {
+    new Promise((resolve, reject) => {
       const sum2 = result.reduce((acc, curr) => acc + curr, 0);
       resolve(sum2);
     })
-    .then((sum2) => console.log(sum2));
+      .then((sum2) => console.log(sum2))
+      .catch((error) => console.log(error));
   })
   .catch (sum => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));
