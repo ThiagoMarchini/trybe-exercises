@@ -6,33 +6,35 @@
 // Quando a promise for resolvida com sucesso, retorne um array com 4 itens, sendo eles o resultado da divisão do numero resultante por 2, 3, 5 e 10.
 // Quando a Promise for rejeitada, imprima, via console.log , a frase "É mais de oito mil! Essa promise deve estar quebrada!"
 // Quando a Promise for bem-sucedida, encadeie nela uma segunda Promise que some os elementos do array.
-const createArray = () => {
-  const array = [];
-  for (let index = 0; index < 10; index += 1) {
-    let number = Math.ceil(Math.random() * 50);
-    array.push((number * number));
+
+// Utilize somente Higher Order Functions para fazer as operações com o array;
+// Refatore a Promise para utilizar somente async e await .
+
+// Resolução copiada do gabarito da Trybe para o Bônus
+
+const sumRandomNumbers = () => {
+  const myArray = Array.from(
+    { length: 10 },
+    () => Math.floor(Math.random() * 50) + 1
+  );
+  const sum = myArray.map(number => number * number)
+    .reduce((number, acc) => number + acc, 0);
+  if (sum >= 8000) {
+    throw new Error();
   }
-  return array;  
+  return sum;
 }
 
+const divArrayFromSum = (sum) => [2, 3, 5, 10].map(number => sum / number)
+  .reduce((number, acc) => number + acc);
 
-const promise = new Promise((resolve, reject) => {
-  const array = createArray();
-  const sum = array.reduce((acc, curr) => acc + curr, 0);
-  if (sum < 8000) {
-    resolve(sum);
+const fetchPromise = async () => {
+  try {
+    const sum = await sumRandomNumbers();
+    const sumFromSum = await divArrayFromSum(sum);
+  } catch (error) {
+    console.log('É mais de oito mil! Essa promise deve estar quebrada!');
   }
-  reject(sum);
-})
-  .then(sum => {
-    const division = [2, 3, 5, 10];
-    const result = division.map((number) => Math.round(sum / number));
-    console.log(result);
-    new Promise((resolve, reject) => {
-      const sum2 = result.reduce((acc, curr) => acc + curr, 0);
-      resolve(sum2)
-      reject(sum2)
-    })
-      .then((sum2) => console.log(sum2))
-  })
-  .catch (sum => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));
+}
+
+fetchPromise();
