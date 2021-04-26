@@ -21,7 +21,7 @@ const requestReturn = [
 
 describe("testando a requisição", () => {
   let apiURL = jest.spyOn( api, "fetchURL");
-  afterEach(apiURL.mockReset);
+  beforeEach(apiURL.mockReset());
 
   test("testando requisição caso a promise resolva", async () => {
     apiURL = jest.fn().mockResolvedValue(requestReturn);
@@ -29,12 +29,12 @@ describe("testando a requisição", () => {
     apiURL();
     expect(apiURL).toHaveBeenCalled();
     expect(apiURL).toHaveBeenCalledTimes(1);
-    expect(apiURL()).resolves.toBe('requisição realizada com sucesso');
+    expect(apiURL()).resolves.toBe(requestReturn);
     expect(apiURL).toHaveBeenCalledTimes(2);
   });
 
   test("testando requisição caso a promise seja rejeitada", async () => {
-    apiURL.mockRejectedValue('a requisição falhou');
+    apiURL = jest.fn().mockRejectedValue('a requisição falhou');
 
     expect(apiURL).toHaveBeenCalledTimes(0);
     expect(apiURL()).rejects.toMatch('a requisição falhou');

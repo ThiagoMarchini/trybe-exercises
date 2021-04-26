@@ -4,7 +4,7 @@
   "description": "Repositório para o armazenamento dos exercícios e projetos desenvolvidos durante o curso de Desenvolvimento Web da Trybe.",
   "main": "service.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
