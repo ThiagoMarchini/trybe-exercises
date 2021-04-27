@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Pokedex from './components/Pokedex';
 
@@ -8,7 +7,7 @@ function App() {
       <header className="App-header">
         <h1>Pokédex</h1>
       </header>
-      <main class="content">
+      <main className="content">
         <Pokedex />
       </main>
     </div>
