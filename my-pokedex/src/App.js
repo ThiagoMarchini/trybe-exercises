@@ -6,8 +6,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Pokedex />
+        <h1>Pokédex</h1>
       </header>
+      <main class="content">
+        <Pokedex />
+      </main>
     </div>
   );
 }
