@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from "./Input";
 
 class Form extends React.Component {
   constructor() {
@@ -9,7 +10,7 @@ class Form extends React.Component {
     this.state = {
       age: 0,
       email: '',
-      interests: '',
+      name: '',
       state: '',
       gostaDeReact: false,
     }
@@ -30,24 +31,20 @@ class Form extends React.Component {
       <form>
         <h1>Formulários com React</h1>
         <fieldset>
-          <label>
-            Qual é a sua idade?
-            <input
-              type="number"
-              name="age"
-              value={this.state.age}
-              onChange={this.handleChange}
-            />
-          </label>
-          <label>
-            Qual o seu email?
-            <input
+          <Input
+            label="Qual é a sua idade?"
+            type="number"
+            name="age"
+            value={this.state.age}
+            handleChange={this.handleChange}
+          />
+          <Input
+              label="Qual é o seu email?"
               type="email"
               name="email"
               value={this.state.email}
               onChange={this.handleChange}
-            />
-          </label>
+          />
           <label>
             Em qual estado você nasceu?
             <select
@@ -61,18 +58,16 @@ class Form extends React.Component {
           <label>
           Foto:
           <input type="file" />
-        </label>
+          </label>
         </fieldset>
         <fieldset>
-          <label>
-            Quais os seus hobbys?
-            <textarea
+          <Input
+              label="Qual o seu nome?"
               type="text"
-              name="interests"
-              value={this.state.interests}
-              onChange={this.handleChange}
+              name="name"
+              value={this.state.name}
+              handleChange={this.handleChange}
             />
-          </label>
           <label>
             Gosta de React?
             <input
@@ -82,7 +77,7 @@ class Form extends React.Component {
               onChange={this.handleChange}
             />
           </label>
-        </fieldset>
+      </fieldset>
       </form>
     );
   }

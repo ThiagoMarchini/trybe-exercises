@@ -12,3 +12,8 @@ fieldset {
 label {
   margin: 5 px;
 }
+
+input {
+  margin-bottom: 15px;
+}
+
