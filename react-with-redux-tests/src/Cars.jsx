@@ -21,6 +21,7 @@ function Cars({ redCar, blueCar, yellowCar, moveCar }) {
         <button
           onClick={() => moveCar('red', !redCar)}
           type="button"
+          data-testid="buttonRedCar"
         >
           Move
         </button>
@@ -35,6 +36,7 @@ function Cars({ redCar, blueCar, yellowCar, moveCar }) {
         <button
           onClick={() => moveCar('blue', !blueCar)}
           type="button"
+          data-testid="buttonBlueCar"
         >
           Move
         </button>
@@ -49,6 +51,7 @@ function Cars({ redCar, blueCar, yellowCar, moveCar }) {
         <button
           onClick={() => moveCar('yellow', !yellowCar)}
           type="button"
+          data-testid="buttonYellowCar"
         >
           Move
         </button>

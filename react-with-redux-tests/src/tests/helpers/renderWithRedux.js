@@ -1,16 +1,17 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { render, cleanup } from '@testing-library/react';
-import App from './App';
-import { createStore, combineReducers } from 'redux';
-import clickReducer from './reducers';
+import { render } from '@testing-library/react';
+import { createStore } from 'redux';
+import { reducer } from '../../redux/index';
 
 const renderWithRedux = (
   component,
-  { initialState, store = createStore(combineReducers({ clickReducer }), initialState) } = {}
+  { initialState, store = createStore(reducer , initialState) } = {}
 ) => {
   return {
     ...render(<Provider store={store}>{component}</Provider>),
     store,
   }
 }
+
+export default renderWithRedux;
