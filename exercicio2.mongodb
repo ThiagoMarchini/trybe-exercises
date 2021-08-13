@@ -1,0 +1,17 @@
+use("class");
+
+//Utilizando o modificador $each , adicione as categorias "villain" e "comic-based" ao filme Batman
+
+db.movies.updateMany(
+  {title: "Batman"},
+  {$push:
+    {
+      category: {
+        $each: [
+          "villain",
+          "comic-based"
+        ]
+      }
+    }
+  }
+);
