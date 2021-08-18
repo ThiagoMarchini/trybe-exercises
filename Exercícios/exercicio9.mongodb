@@ -1,0 +1,31 @@
+// Descubra quais são os 10 clientes que gastaram o maior valor no ano de 2019.
+
+use("erp");
+
+db.vendas.aggregate([
+  {
+    $match: {
+      $and: [
+          { status: { $in: ["ENTREGUE", "EM SEPARACAO"] } },
+          { dataVenda: { 
+            $gt: ISODate("2019-01-01T00:00:00Z"),
+            $lt: ISODate("2019-12-31T23:59:59Z"),
+          } },
+      ],
+    }
+  },
+  {
+    $group: {
+          _id: "$clienteId",
+          valorTotal: {
+            $sum: "$valorTotal",
+          }
+    }
+  },
+  {
+    $sort: {
+          valorTotal: -1
+        }
+  },
+  { $limit: 10 },
+]);
