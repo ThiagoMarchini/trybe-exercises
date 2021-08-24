@@ -3,7 +3,9 @@ const readline = require('readline-sync');
 const scripts = [
   { name: 'IMC', script: './imc.js' },
   { name: 'Velocidade', script: './velocidade.js' },
-  { name: 'Sorteio\n', script: './sorteio.js' },
+  { name: 'Sorteio', script: './sorteio.js' },
+  { name: 'Fatorial', script: './fatorial.js' },
+  { name: 'Fibonacci\n', script: './fibonacci.js' },
 ];
 
 // Cria uma lista numerada
