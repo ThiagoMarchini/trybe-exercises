@@ -9,7 +9,7 @@ function positivoNegativoNeutro(number) {
       return 'negativo'
     default:
       return 'neutro';
-  };
-};
+  }
+}
 
 module.exports = positivoNegativoNeutro;
