@@ -35,6 +35,13 @@ function compare(a, b) {
   return comparison;
 }
 
+function validateName(req, res, next) {
+  const { name } = req.body;
+  if (!name || name === '') return res.status(400).json({ message: 'Invalid data!'});
+
+  next(); 
+};
+
 app.get('/validateToken', function (req, res) {
   const token = req.headers.authorization;
   if (token.length !== 16) return res.status(401).json({message: 'Invalid Token!'});
@@ -42,7 +49,7 @@ app.get('/validateToken', function (req, res) {
   res.status(200).json({message: 'Valid Token!'});
 });
 
-app.put('/recipes/:id', function(req, res) {
+app.put('/recipes/:id', validateName, function(req, res) {
   const { id } = req.params;
   const { name, price, waitTime } = req.body;
   const recipeIndex = recipes.findIndex((r) => r.id === parseInt(id));
@@ -88,7 +95,7 @@ app.get('/recipes/:id', function(req,res) {
   res.status(200).json(recipe);
 });
 
-app.post('/drinks', function(req, res) {
+app.post('/drinks', validateName, function(req, res) {
   const { id, name, price } = req.body;
   drinks.push({ id, name, price });
   res.status(201).json({ message: 'Drink created successfully!'});
@@ -112,7 +119,7 @@ app.get('/drinks/:id', function(req, res) {
   res.status(200).json(drink);
 })
 
-app.put('/drinks/:id', function(req, res) {
+app.put('/drinks/:id', validateName, function(req, res) {
   const { id } = req.params;
   const { name, price } = req.body;
   const drinkIndex = drinks.findIndex((r) => r.id === parseInt(id));
