@@ -3,10 +3,10 @@ const jwt = require('jsonwebtoken');
 const secret = 'meusecrtetsupersecreto';
 
 const verifyUser = (username, password) => {
-  if (!username || username.length < 5 || typeof username !== 'string') return false;
-  if (!password || password.length < 5 || typeof password !== 'string') return false;
+  if (username.length < 5 || typeof username !== 'string') return false;
+  if (password.length < 5 || typeof password !== 'string') return false;
   return true;
-}
+};
 
 const login = (req, res) => {
   const { username, password } = req.body;
@@ -19,7 +19,7 @@ const login = (req, res) => {
     const payload = {
       username,
       admin: false,
-    }
+    };
 
     if (username === 'admin' && password === 's3nh4S3gur4???') payload.admin = true;
 
@@ -29,6 +29,6 @@ const login = (req, res) => {
   }
 
   return res.status(422).json({ message: 'E necessário enviar o nome do usuário e senha' });
-}
+};
 
 module.exports = login;
